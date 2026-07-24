@@ -1,0 +1,78 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-purple: var(--brand-purple);
+  --color-teal: var(--brand-teal);
+  --color-amber: var(--brand-amber);
+  --color-blue: var(--brand-blue);
+  --color-red: var(--brand-red);
+
+  --font-mono: ui-monospace, "SF Mono", Menlo, Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #0a0a09;
+  --foreground: #e8e8e4;
+  --card: #111110;
+  --card-foreground: #e8e8e4;
+  --popover: #111110;
+  --primary: #8b83e8;
+  --primary-foreground: #0a0a09;
+  --secondary: #1a1a18;
+  --muted: #161614;
+  --muted-foreground: #6b6b66;
+  --accent: #1a1a18;
+  --destructive: #e05249;
+  --border: #1a1a18;
+  --input: #1a1a18;
+  --ring: #8b83e8;
+
+  --brand-purple: #8b83e8;
+  --brand-teal: #1faa7e;
+  --brand-amber: #f0a132;
+  --brand-blue: #4a8fe0;
+  --brand-red: #e05249;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
