@@ -8,3 +8,5 @@ frontend/node_modules/
 ml-service/venv/
 ml-service/.env
 .pytest_cache/
+
+.early.coverage
