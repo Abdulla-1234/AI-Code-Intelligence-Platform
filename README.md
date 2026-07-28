@@ -38,12 +38,15 @@ None of these function names contain the words *"retry"* or *"logic"* — the mo
 > **[LOW]** `backend/src/utils/backoff.js` — *Suggestion: remove the trailing comment for consistency.*
 
 ---
+
 ## Architecture
 
 <p align="center">
   <img src="./code_intel_architecture.png" alt="AI Code Intelligence Platform Architecture" width="820"/>
 </p>
+
 ---
+
 [![CI](https://github.com/Abdulla-1234/AI-Code-Intelligence-Platform/actions/workflows/ci.yml/badge.svg)](https://github.com/Abdulla-1234/AI-Code-Intelligence-Platform/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.117-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -53,6 +56,7 @@ None of these function names contain the words *"retry"* or *"logic"* — the mo
 [![Groq](https://img.shields.io/badge/Groq-Llama%203.3%2070B-orange)](https://groq.com)
 [![Tests](https://img.shields.io/badge/tests-5%20passing-success)](#run-tests)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ---
 
 ## Features
