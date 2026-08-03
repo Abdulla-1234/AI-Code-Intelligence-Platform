@@ -16,10 +16,13 @@ from app.services.review_agent import review_pull_request
 from app.services.github_client import post_pr_comment
 
 app = FastAPI(title="Code Intelligence API")
+@app.get("/")
+def root():
+    return {"status": "ok", "service": "code-intelligence-api"}
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],
+    allow_origins=["*"],  # we'll lock this down after frontend is deployed
     allow_methods=["*"],
     allow_headers=["*"],
 )

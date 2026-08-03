@@ -1,16 +1,20 @@
-import os
-import psycopg2
 from dotenv import load_dotenv
 
 load_dotenv()
 
+import os
+import psycopg2
+
 def get_connection():
+    database_url = os.getenv("DATABASE_URL")
+    if database_url:
+        return psycopg2.connect(database_url, sslmode="require")
     return psycopg2.connect(
-        host=os.getenv("PG_HOST"),
-        port=os.getenv("PG_PORT"),
-        user=os.getenv("PG_USER"),
-        password=os.getenv("PG_PASSWORD"),
-        dbname=os.getenv("PG_DB"),
+        host=os.getenv("PG_HOST", "localhost"),
+        port=os.getenv("PG_PORT", "5434"),
+        user=os.getenv("PG_USER", "admin"),
+        password=os.getenv("PG_PASSWORD", "password"),
+        dbname=os.getenv("PG_DB", "codeintel"),
     )
 
 def init_db():
